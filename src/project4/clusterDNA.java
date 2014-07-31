@@ -186,6 +186,7 @@ public class clusterDNA {
 			values = line.split(",");
 			DNA.add(values[0]);
 		}
+		br.close();
 	}
 	
 }
