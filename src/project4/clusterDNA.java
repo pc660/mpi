@@ -60,11 +60,11 @@ public class clusterDNA {
 				for (int j  = 1; j< size; j++) {
 
 					Status status = MPI.COMM_WORLD.Recv(nearestCenter, 0, numofslave, MPI.INT,MPI.ANY_SOURCE, 1);
-
+					
 					for (int k = 0; k < numofslave; k++) {
 						nearestCenterAll[((status.source - 1) * numofslave) + k] = nearestCenter[k];
 					}
-					
+				}
 					
 					for (int k = 0; k < numofslave; k++) {
 						clusters[ nearestCenterAll[k]  ].add(DNA.get(k));
