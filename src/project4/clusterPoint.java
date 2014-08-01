@@ -5,12 +5,21 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
 import mpi.*;
 
 public class clusterPoint {
+
+	
+	
+	private class point implements Serializable{
+		
+		public double x;
+		public double y;
+	}
 
 	public   ArrayList<point> [] clusters;
 	public int numofclusters;
@@ -24,6 +33,9 @@ public class clusterPoint {
 	public point [] center = new point [1];
 	public ArrayList<point>[] group = new ArrayList [1];
 	public ArrayList<point> points;
+	
+	
+	
 	public void start () throws Exception
 	{
 		//first get max and min
@@ -192,3 +204,7 @@ public class clusterPoint {
 	}
 	
 }
+
+
+
+
