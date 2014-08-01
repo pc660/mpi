@@ -24,7 +24,7 @@ public class clusterPoint {
 	public point [] center = new point [1];
 	public ArrayList<point>[] group = new ArrayList [1];
 	public ArrayList<point> points;
-	public void start ()
+	public void start () throws Exception
 	{
 		//first get max and min
 		for (point p : points)

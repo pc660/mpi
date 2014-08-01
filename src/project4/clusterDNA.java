@@ -21,7 +21,7 @@ public class clusterDNA {
 	{
 		DNA = new ArrayList<String> ();
 	}
-	public void start ()
+	public void start () throws Exception
 	{
 		DNAlength = DNA.get(0).length();
 		centers = new String [num];
