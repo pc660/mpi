@@ -187,7 +187,7 @@ public class clusterPoint {
 		}	
 	}
 	
-	public void readCSV(String input)
+	public void readCSV(String input) throws IOException
 	{
 		BufferedReader br = new BufferedReader(new FileReader(input));
 		String line = "";
